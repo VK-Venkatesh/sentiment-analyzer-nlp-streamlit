@@ -5,7 +5,7 @@ Project Type: Natural Language Processing (Text Classification)
 Goal: Analyze and classify sentiments in mental health–related text data
 Tech Stack: Python · NLP · TensorFlow/Keras · Streamlit
 Dataset: Kaggle – Mental Health Sentiment Dataset
- (replace with your dataset link)
+ (https://www.kaggle.com/datasets/suchintikasarkar/sentiment-analysis-for-mental-health/data)
 
 ### 🧠  Overview
 
@@ -29,53 +29,53 @@ Use: Supervised classification of text sentiment for mental health awareness
 ### ⚙️ Steps & Workflow
 * 1. Data Collection & Loading
 
-       Dataset downloaded from Kaggle (.csv format)
+        Dataset downloaded from Kaggle (.csv format)
 
-       Loaded into Pandas for inspection
+        Loaded into Pandas for inspection
 
 * 2.Preprocessing
 
-Lowercasing, punctuation & stopword removal
+        Lowercasing, punctuation & stopword removal
 
-Tokenization and Lemmatization (using NLTK or SpaCy)
+        Tokenization and Lemmatization (using NLTK or SpaCy)
 
-Handling URLs, mentions, and emojis
+        Handling URLs, mentions, and emojis
 
-Removing duplicates and missing entries
+        Removing duplicates and missing entries
 
 * 3.Feature Engineering
 
-Convert text → sequences
+        Convert text → sequences
 
-Apply TF-IDF, Word2Vec, or Embedding layer
+        Apply TF-IDF, Word2Vec, or Embedding layer
 
-Padding sequences for uniform input shape
+        Padding sequences for uniform input shape
 
 * 4.Model Building (Deep Learning + NLP)
 
-LSTM / BiLSTM-based neural network
+        LSTM / BiLSTM-based neural network
 
-Optional fine-tuning with pretrained BERT / DistilBERT models
+        Optional fine-tuning with pretrained BERT / DistilBERT models
 
-Loss: Categorical Crossentropy
+        Loss: Categorical Crossentropy
 
-Optimizer: Adam
+        Optimizer: Adam
 
 * 5.Training & Validation
 
-Split: 70% Train / 20% Validation / 10% Test
+        Split: 70% Train / 20% Validation / 10% Test
 
-Monitored with EarlyStopping and ModelCheckpoint
+        Monitored with EarlyStopping and ModelCheckpoint
 
 * 6.Evaluation
 
-Accuracy, Precision, Recall, F1-score
+        Accuracy, Precision, Recall, F1-score
 
-Confusion Matrix visualization
+        Confusion Matrix visualization
 
 * 7.Deployment
 
-Streamlit app for real-time text sentiment prediction
+        Streamlit app for real-time text sentiment prediction
 
 ### 💬 Streamlit Real-Time App
 Interactive web interface for sentiment prediction:
