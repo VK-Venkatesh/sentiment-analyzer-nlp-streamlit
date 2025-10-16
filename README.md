@@ -1,61 +1,61 @@
 # sentiment-analyzer-nlp-streamlit
-Mental Health Sentiment Analysis — NLP Project
+# Mental Health Sentiment Analysis — NLP Project
 
-Project: Sentiment Classification for Mental Health Discussions
-Domain: Natural Language Processing (Text-Based)
-Dataset Source: Kaggle — Mental Health Sentiment Dataset
+### * Project: Sentiment Classification for Mental Health Discussions
+### * Domain: Natural Language Processing (Text-Based)
+### * Dataset Source: Kaggle — Mental Health Sentiment Dataset
  (replace with your dataset link)
 
-🧠 Overview
+## 🧠  Overview
 
 This project focuses on analyzing text data related to mental health discussions to classify sentiment as Positive, Negative, or Neutral.
 Using a CSV dataset from Kaggle, the project applies a Natural Language Processing (NLP) workflow to clean, preprocess, vectorize, and model the text using Deep Learning and traditional ML approaches.
 
 The trained model is deployed through a Streamlit app for real-time sentiment prediction on custom text inputs.
 
-🧾 Dataset
+## 🧾 Dataset
 
-Source: Kaggle
+* Source: Kaggle
 
-Format: CSV
+* Format: CSV
 
-Columns Example:
+* Columns Example:
 
-text	label
-“I’m feeling very anxious today.”	negative
-“Therapy has really helped me stay calm.”	positive
+**text	label**
+“I’m feeling very anxious today.”	 Anxiety
+“Therapy has really helped me stay calm.”	Stress
 
-Sentiment Classes:
+**Sentiment Classes:**
 
-Positive 🙂
+1.Normal
+2.Depression
+3.Suicidal
+4.Anxiety
+5.Stress
+6.Bi-Polar
+7.Personality Disorder
 
-Negative 🙁
+## ⚙️ Steps & Workflow
 
-Neutral 😐
+* 1.Data Collection
 
-(replace dataset link when publishing)
+* 2. Download dataset from Kaggle
 
-⚙️ Steps & Workflow
+* 3.Load .csv file into pandas DataFrame
 
-Data Collection
+* 4.Text Preprocessing
 
-Download dataset from Kaggle
+* 5.Lowercasing, punctuation removal, stopword removal
 
-Load .csv file into pandas DataFrame
+* 6.Tokenization & Lemmatization
 
-Text Preprocessing
+* 7.Handling emojis/emoticons (optional)
 
-Lowercasing, punctuation removal, stopword removal
+* 8.Converting text to clean sentences for vectorization
 
-Tokenization & Lemmatization
+* 9.Feature Extraction (Vectorization)
 
-Handling emojis/emoticons (optional)
-
-Converting text to clean sentences for vectorization
-
-Feature Extraction (Vectorization)
-
-TF-IDF Vectorizer
+* 10.TF-IDF Vectorizer
 
 Word2Vec or GloVe embeddings (for DL models)
 
@@ -93,86 +93,16 @@ Real-time text input for prediction
 
 Displays sentiment label and confidence
 
-🧩 Example Model (LSTM-based)
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Embedding, LSTM, Dense, Dropout
-
-model = Sequential([
-    Embedding(input_dim=vocab_size, output_dim=128, input_length=max_len),
-    LSTM(128, return_sequences=False),
-    Dropout(0.3),
-    Dense(64, activation='relu'),
-    Dense(3, activation='softmax')
-])
-
-model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-
-📊 Evaluation Metrics
-Metric	Value (example)
-Accuracy	0.91
-Precision	0.89
-Recall	0.90
-F1-Score	0.89
-
-(update with your actual model results)
-
-💬 Streamlit Real-Time App
-import streamlit as st
-from tensorflow.keras.models import load_model
-import numpy as np
-from preprocess_text import clean_text, vectorize
-
-model = load_model('best_model.h5')
-st.title("🧠 Mental Health Sentiment Classifier")
-
-text_input = st.text_area("Enter a thought or sentence:")
-if st.button("Analyze Sentiment"):
-    if text_input.strip():
-        X = vectorize(clean_text(text_input))
-        pred = model.predict(X)
-        label = ['Negative','Neutral','Positive'][np.argmax(pred)]
-        st.success(f"**Sentiment:** {label}")
-
-🚀 How to Run
-
-Clone the Repository
-
-git clone https://github.com/<your_username>/Mental-Health-Sentiment-Analysis.git
-cd Mental-Health-Sentiment-Analysis
+## 💬 Streamlit Real-Time App
 
 
-Install Dependencies
-
-pip install -r requirements.txt
-
-
-Run the App
-
-streamlit run app/streamlit_app.py
-
-🧠 Technologies Used
-
-Python 🐍
-
-Pandas, NumPy
-
-TensorFlow / Keras
-
-Scikit-learn
-
-NLTK / SpaCy
-
-Streamlit
-
-Matplotlib / Seaborn
-
-📜 License
+## 📜 License
 
 This project is released under the MIT License.
 
-✉️ Contact
+## ✉️ Contact
 
-Maintainer: Your Name
-Email: your.email@example.com
+Maintainer: Venkatesh
+Email: venkateshvarada56@gmail.com
 
-GitHub: @yourusername
+GitHub: 
