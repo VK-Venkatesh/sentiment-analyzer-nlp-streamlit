@@ -1,104 +1,113 @@
-# sentiment-analyzer-nlp-streamlit
-# Mental Health Sentiment Analysis — NLP Project
 
-### * Project: Sentiment Classification for Mental Health Discussions
-### * Domain: Natural Language Processing (Text-Based)
-### * Dataset Source: Kaggle — Mental Health Sentiment Dataset
+## Mental Health Sentiment Analysis — NLP Project
+
+Project Type: Natural Language Processing (Text Classification)
+Goal: Analyze and classify sentiments in mental health–related text data
+Tech Stack: Python · NLP · TensorFlow/Keras · Streamlit
+Dataset: Kaggle – Mental Health Sentiment Dataset
  (replace with your dataset link)
 
-## 🧠  Overview
+### 🧠  Overview
 
-This project focuses on analyzing text data related to mental health discussions to classify sentiment as Positive, Negative, or Neutral.
-Using a CSV dataset from Kaggle, the project applies a Natural Language Processing (NLP) workflow to clean, preprocess, vectorize, and model the text using Deep Learning and traditional ML approaches.
+This project applies Deep Learning and NLP to classify text into Positive, Negative, or Neutral sentiments related to mental health expressions.
+The data was sourced from Kaggle in CSV format and processed through a standard NLP workflow: text cleaning, tokenization, embedding, model training, evaluation, and deployment with Streamlit for real-time predictions.
 
-The trained model is deployed through a Streamlit app for real-time sentiment prediction on custom text inputs.
+### 🧾 Dataset
 
-## 🧾 Dataset
+* Source: Kaggle (CSV file)
 
-* Source: Kaggle
+* Content: Text entries expressing mental/emotional states
 
-* Format: CSV
+### Columns:
 
-* Columns Example:
+* text → user’s sentence or statement
 
-**text	label**
-“I’m feeling very anxious today.”	 Anxiety
-“Therapy has really helped me stay calm.”	Stress
+* sentiment → label (Normal/Depression/SuicidalAnxiety/Stress/Bi-Polar/Personality Disorder)
 
-**Sentiment Classes:**
+Use: Supervised classification of text sentiment for mental health awareness
 
-1.Normal
-2.Depression
-3.Suicidal
-4.Anxiety
-5.Stress
-6.Bi-Polar
-7.Personality Disorder
+### ⚙️ Steps & Workflow
+* 1. Data Collection & Loading
 
-## ⚙️ Steps & Workflow
+       Dataset downloaded from Kaggle (.csv format)
 
-* 1.Data Collection
+       Loaded into Pandas for inspection
 
-* 2. Download dataset from Kaggle
+* 2.Preprocessing
 
-* 3.Load .csv file into pandas DataFrame
+Lowercasing, punctuation & stopword removal
 
-* 4.Text Preprocessing
+Tokenization and Lemmatization (using NLTK or SpaCy)
 
-* 5.Lowercasing, punctuation removal, stopword removal
+Handling URLs, mentions, and emojis
 
-* 6.Tokenization & Lemmatization
+Removing duplicates and missing entries
 
-* 7.Handling emojis/emoticons (optional)
+* 3.Feature Engineering
 
-* 8.Converting text to clean sentences for vectorization
+Convert text → sequences
 
-* 9.Feature Extraction (Vectorization)
+Apply TF-IDF, Word2Vec, or Embedding layer
 
-* 10.TF-IDF Vectorizer
+Padding sequences for uniform input shape
 
-Word2Vec or GloVe embeddings (for DL models)
+* 4.Model Building (Deep Learning + NLP)
 
-Padding & sequence encoding for RNN/LSTM networks
+LSTM / BiLSTM-based neural network
 
-Model Building
+Optional fine-tuning with pretrained BERT / DistilBERT models
 
-Traditional ML: Logistic Regression, SVM, RandomForest
+Loss: Categorical Crossentropy
 
-Deep Learning (Preferred):
+Optimizer: Adam
 
-CNN + LSTM for sentence-level features
-
-BiLSTM / GRU with Embedding layer
-
-Transformers (BERT / DistilBERT fine-tuning optional)
-
-Training & Validation
+* 5.Training & Validation
 
 Split: 70% Train / 20% Validation / 10% Test
 
-Metrics: Accuracy, Precision, Recall, F1-score
+Monitored with EarlyStopping and ModelCheckpoint
 
-Evaluation
+* 6.Evaluation
 
-Confusion matrix visualization
+Accuracy, Precision, Recall, F1-score
 
-ROC-AUC Curve
+Confusion Matrix visualization
 
-Classification report
+* 7.Deployment
 
-Deployment — Streamlit App
+Streamlit app for real-time text sentiment prediction
 
-Real-time text input for prediction
+### 💬 Streamlit Real-Time App
+Interactive web interface for sentiment prediction:
 
-Displays sentiment label and confidence
+File: app/streamlit_app.py
 
-## 💬 Streamlit Real-Time App
+### 🧰 Technologies Used
 
+* Python (3.9+)
 
+* TensorFlow / Keras
+
+* NLTK / SpaCy
+
+* Scikit-learn
+
+* Pandas, NumPy
+
+* Streamlit
+
+* Matplotlib / Seaborn
+## 🪄 Key Highlights
+
+✅ Text preprocessing & vectorization
+✅ LSTM-based NLP model for sequence learning
+✅ Real-time sentiment prediction web app
+✅ Clear visual evaluation metrics
 ## 📜 License
 
 This project is released under the MIT License.
+Please refer to the LICENSE
+ file for details.
 
 ## ✉️ Contact
 
