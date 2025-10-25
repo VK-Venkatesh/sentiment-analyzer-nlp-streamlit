@@ -112,6 +112,6 @@ Please refer to the LICENSE
 ## ✉️ Contact
 
 Maintainer: Venkatesh
-Email: venkateshvarada56@gmail.com
+Email: [venkateshvarada56@gmail.com]
 
-GitHub: https://github.com/VK-Venkatesh
+GitHub: [https://github.com/VK-Venkatesh]
