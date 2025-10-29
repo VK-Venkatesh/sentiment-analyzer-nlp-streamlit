@@ -1,5 +1,5 @@
 
-## Mental Health Sentiment Analysis — NLP Project
+## Mental Health Sentiment Analysis - NLP Project
 
 Project Type: Natural Language Processing (Text Classification)
 Goal: Analyze and classify sentiments in mental health–related text data
