@@ -99,7 +99,7 @@ File: app/streamlit_app.py
 * Matplotlib / Seaborn
 ## 🪄 Key Highlights
 
-✅ Text preprocessing & vectorization
+* ✅ Text preprocessing & vectorization
 ✅ LSTM-based NLP model for sequence learning
 ✅ Real-time sentiment prediction web app
 ✅ Clear visual evaluation metrics
