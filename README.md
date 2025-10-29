@@ -100,7 +100,7 @@ File: app/streamlit_app.py
 ## 🪄 Key Highlights
 
 * ✅ Text preprocessing & vectorization
-✅ LSTM-based NLP model for sequence learning
+* ✅ LSTM-based NLP model for sequence learning
 ✅ Real-time sentiment prediction web app
 ✅ Clear visual evaluation metrics
 ## 📜 License
