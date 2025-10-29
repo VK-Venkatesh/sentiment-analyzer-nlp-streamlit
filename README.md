@@ -102,7 +102,7 @@ File: app/streamlit_app.py
 * ✅ Text preprocessing & vectorization
 * ✅ LSTM-based NLP model for sequence learning
 * ✅ Real-time sentiment prediction web app
-✅ Clear visual evaluation metrics
+* ✅ Clear visual evaluation metrics
 ## 📜 License
 
 This project is released under the MIT License.
