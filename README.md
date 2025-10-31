@@ -97,6 +97,7 @@ File: app/streamlit_app.py
 * Streamlit
 
 * Matplotlib / Seaborn
+  
 ## 🪄 Key Highlights
 
 * ✅ Text preprocessing & vectorization
